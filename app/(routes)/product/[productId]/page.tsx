@@ -2,7 +2,8 @@ import getProduct from "@/actions/get-product";
 import getProducts from "@/actions/get-products";
 import Gallery from "@/components/gallery";
 import Info from "@/components/info";
-import ProductList from "@/components/product-list";
+// import ProductList from "@/components/product-list";
+import RelatedProduct from "@/components/related-product";
 import Container from "@/components/ui/container";
 
 type ProductPageProps = {
@@ -15,6 +16,8 @@ const ProductPage = async ({ params }: ProductPageProps) => {
   const suggestedProducts = await getProducts({
     categoryId: product?.category?.id,
   });
+
+  const products = suggestedProducts.filter((item) => item.id !== productId);
 
   return (
     <div>
@@ -29,7 +32,8 @@ const ProductPage = async ({ params }: ProductPageProps) => {
             </div>
           </div>
           <hr className="my-10" />
-          <ProductList title="Related Products" items={suggestedProducts} />
+          {/* <ProductList title="Related Products" items={suggestedProducts} /> */}
+          <RelatedProduct title="Related Products" items={products} />
         </div>
       </Container>
     </div>

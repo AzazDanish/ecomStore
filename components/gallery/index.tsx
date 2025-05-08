@@ -9,7 +9,7 @@ type GalleryProps = {
 };
 const Gallery = ({ images }: GalleryProps) => {
   return (
-    <TabGroup as="div" className="flex flex-col-reverse">
+    <TabGroup as="div" className="flex flex-col-reverse m-4">
       <div className="mx-auto mt-6  w-full block  max-w-2xl lg:max-w-none">
         <TabList className="grid grid-cols-4 gap-6">
           {images.map((image) => (

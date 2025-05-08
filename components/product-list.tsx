@@ -1,6 +1,7 @@
 import { Product } from "@/types";
 import NoResult from "./ui/no-result";
 import ProductCard from "./ui/product-card";
+import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 
 type ProductListProps = {
   title: string;
@@ -17,6 +18,15 @@ const ProductList = ({ title, items }: ProductListProps) => {
           <ProductCard data={item} key={item.id} />
         ))}
       </div>
+      {/* <Carousel className="w-full max-w-sm">
+        <CarouselContent>
+          {items.map((item) => (
+            <CarouselItem key={item.id}>
+              <ProductCard data={item} key={item.id} />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel> */}
     </div>
   );
 };

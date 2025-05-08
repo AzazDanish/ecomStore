@@ -18,7 +18,7 @@ type ProductCardProps = {
 };
 
 const ProductCard = ({ data }: ProductCardProps) => {
-  const cart = useCart();
+  const addItem = useCart((state) => state.addItem);
   const previewModal = usePreviewModal();
   const router = useRouter();
 
@@ -33,7 +33,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
 
   const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation();
-    cart.addItem(data);
+    addItem(data);
   };
 
   return (

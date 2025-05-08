@@ -10,12 +10,19 @@ const Navbar = async () => {
   return (
     <nav className="border-b">
       <Container>
-        <div className="flex items-center  px-4 sm:px-6 lg:px-8 h-16">
-          <Link href="/" className="ml-4 flex lg:ml-0">
-            <p className="font-bold text-2xl">AzazDanish.</p>
-          </Link>
-          <MainNav data={categories} />
-          <NavbarActions />
+        <div className="flex items-center w-full justify-between   px-4 sm:px-6 lg:px-8 h-16">
+          <div className="flex-1">
+            <MainNav data={categories} className="" />
+          </div>
+          <div className="flex flex-1 items-center justify-center">
+            <Link href="/" className=" flex  ">
+              <p className="font-semibold text-2xl">AzazDanish.</p>
+            </Link>
+          </div>
+
+          <div className="flex flex-1  justify-end">
+            <NavbarActions />
+          </div>
         </div>
       </Container>
     </nav>

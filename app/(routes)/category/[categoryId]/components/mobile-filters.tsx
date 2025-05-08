@@ -19,8 +19,9 @@ const MobileFilters = ({ colors, sizes }: MobileFiltersProps) => {
   return (
     <>
       <Button
-        className="flex items-center gap-x-2 rounded-full lg:hidden"
+        className="flex items-center gap-x-2 rounded-full lg:hidden "
         onClick={() => Open()}
+        variant="outline"
       >
         Filters
         <PlusIcon />
