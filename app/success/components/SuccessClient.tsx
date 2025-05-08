@@ -30,7 +30,7 @@ const SuccessClient = () => {
   //   console.log(order);
 
   return (
-    <div className="flex items-center justify-center min-h-[calc(100vh-8rem)]">
+    <div className="flex items-center justify-center min-h-[calc(100vh-8rem)] m-2">
       <div className="border p-6 rounded border-green-200 bg-green-50/50 ">
         <h1 className="text-2xl font-semibold">
           Payment{" "}
