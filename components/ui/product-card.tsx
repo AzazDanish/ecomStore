@@ -3,13 +3,13 @@
 import { Product } from "@/types";
 import Image from "next/image";
 
-import IconButton from "./icon-button";
-import { Expand, ShoppingCart } from "lucide-react";
+// import IconButton from "./icon-button";
+// import { Expand, ShoppingCart } from "lucide-react";
 
 import AddToCart from "./add-to-cart";
 import { useRouter } from "next/navigation";
 import { MouseEventHandler } from "react";
-import { usePreviewModal } from "@/hooks/use-preview-modal";
+// import { usePreviewModal } from "@/hooks/use-preview-modal";
 import { useCart } from "@/hooks/useCart";
 import { Button } from "./button";
 import Link from "next/link";
@@ -20,17 +20,17 @@ type ProductCardProps = {
 
 const ProductCard = ({ data }: ProductCardProps) => {
   const addItem = useCart((state) => state.addItem);
-  const previewModal = usePreviewModal();
+  // const previewModal = usePreviewModal();
   const router = useRouter();
 
   const handleClick = () => {
     router.push(`/product/${data.id}`);
   };
 
-  const onPreview: MouseEventHandler<HTMLButtonElement> = (event) => {
-    event.stopPropagation();
-    previewModal.onOpen(data);
-  };
+  // const onPreview: MouseEventHandler<HTMLButtonElement> = (event) => {
+  //   event.stopPropagation();
+  //   previewModal.onOpen(data);
+  // };
 
   const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation();
@@ -53,7 +53,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
           />
 
           {/* Hover Buttons */}
-          <div className="absolute bottom-3 w-full px-4 opacity-0 group-hover:opacity-100 transition">
+          {/* <div className="absolute bottom-3 w-full px-4 opacity-0 group-hover:opacity-100 transition">
             <div className="flex items-center justify-center gap-x-3 pointer-events-auto">
               <IconButton
                 onClick={onPreview}
@@ -66,7 +66,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
                 className="bg-white/90 backdrop-blur-sm p-2 rounded-full shadow hover:bg-white"
               />
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Product Info */}
