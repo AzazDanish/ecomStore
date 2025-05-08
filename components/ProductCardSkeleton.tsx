@@ -13,8 +13,8 @@ const ProductPageSkeleton = () => {
             {/* Gallery Skeleton */}
             <div>
               <Skeleton className="aspect-square w-full rounded-lg" />
-              <div className="grid grid-cols-4 gap-4 mt-4">
-                {Array.from({ length: 4 }).map((_, i) => (
+              <div className="grid grid-cols-4 gap-1 mt-6">
+                {Array.from({ length: 3 }).map((_, i) => (
                   <Skeleton key={i} className="h-16 w-16 rounded-md" />
                 ))}
               </div>
@@ -22,12 +22,11 @@ const ProductPageSkeleton = () => {
 
             {/* Info Skeleton */}
             <div className="mt-10 sm:mt-16 lg:mt-0 space-y-4">
-              <Skeleton className="h-8 w-3/4" />
-              <Skeleton className="h-6 w-1/3" />
-              <Skeleton className="h-10 w-full" />
-              <Skeleton className="h-6 w-1/2" />
-              <Skeleton className="h-6 w-1/3" />
-              <Skeleton className="h-12 w-full mt-4" />
+              <Skeleton className="md:h-8  md:w-1/2 h-6 w-1/3" />
+              <Skeleton className="md:h-6 md:w-1/3 h-4 w-1/2" />
+              <Skeleton className=" md:h-10 md:w-full" />
+              <Skeleton className="md:h-6 md:w-1/3 " />
+              <Skeleton className="md:h-12 md:w-full mt-4" />
             </div>
           </div>
 

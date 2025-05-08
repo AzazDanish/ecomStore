@@ -4,7 +4,7 @@ import { Product } from "@/types";
 
 import Currency from "./ui/add-to-cart";
 import { Button } from "./ui/button";
-import { ShoppingCart } from "lucide-react";
+import { PackageCheck, ShoppingCart } from "lucide-react";
 import { useCart } from "@/hooks/useCart";
 
 type InfoProps = {
@@ -35,6 +35,8 @@ const Info = ({ data }: InfoProps) => {
           />
         </div>
       </div>
+      {/* General info */}
+
       <div className="flex items-center my-10">
         <Button className="flex gap-x-2" onClick={() => addItem(data)}>
           ADD TO CART
