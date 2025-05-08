@@ -12,7 +12,6 @@ import { MouseEventHandler } from "react";
 // import { usePreviewModal } from "@/hooks/use-preview-modal";
 import { useCart } from "@/hooks/useCart";
 import { Button } from "./button";
-import Link from "next/link";
 
 type ProductCardProps = {
   data: Product;
