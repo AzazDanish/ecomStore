@@ -4,7 +4,7 @@ import { Product } from "@/types";
 
 import Currency from "./ui/add-to-cart";
 import { Button } from "./ui/button";
-import { PackageCheck, ShoppingCart } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import { useCart } from "@/hooks/useCart";
 
 type InfoProps = {

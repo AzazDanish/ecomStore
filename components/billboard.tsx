@@ -7,18 +7,16 @@ const Billboard = ({ data }: BillboardProps) => {
   return (
     <div className="p-4 sm:p-6 lg:p-8 rounded-xl overflow-hidden">
       <div
-        className="aspect-[21/9]  bg-blue-500 rounded-xl  "
+        className="aspect-[21/9] bg-center  bg-blue-500 rounded-xl  bg-cover"
         style={{
           backgroundImage: `url(${data?.imageURL})`,
-          backgroundSize: "100% 100%",
-          filter: "brightness(70%)",
         }}
       >
-        <div className="h-full w-full flex items-center justify-center text-center  ">
+        {/* <div className="h-full w-full flex items-center justify-center text-center  ">
           <div className="font-bold text-3xl sm:text-5xl lg:text-6xl sm:max-w-xl max-w-xs text-white">
             {data?.label}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
