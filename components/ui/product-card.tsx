@@ -42,7 +42,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
       className="group cursor-pointer rounded bg-white p-3  shadow-sm hover:shadow-md border border-gray-200 transition"
     >
       {/* Image Section */}
-      <div className="relative aspect-square w-full overflow-hidden rounded-sm bg-gray-100">
+      <div className="relative aspect-square w-full overflow-hidden rounded-sm pointer-events-none bg-gray-100">
         <Image
           alt={data.name}
           src={data.images?.[0]?.url}
@@ -52,7 +52,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
 
         {/* Hover Buttons */}
         <div className="absolute bottom-3 w-full px-4 opacity-0 group-hover:opacity-100 transition">
-          <div className="flex items-center justify-center gap-x-3">
+          <div className="flex items-center justify-center gap-x-3 pointer-events-auto">
             <IconButton
               onClick={onPreview}
               icon={<Expand size={18} />}
