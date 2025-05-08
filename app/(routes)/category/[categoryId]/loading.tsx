@@ -6,7 +6,7 @@ const BillboardPageSkeleton = () => {
   return (
     <div className="px-4 py-10 sm:px-6 lg:px-8">
       {/* Billboard Skeleton */}
-      <div className="w-full h-64 rounded-lg overflow-hidden mb-10">
+      <div className="aspect-[21/9] rounded-lg overflow-hidden mb-10">
         <Skeleton className="w-full h-full rounded-lg bg-gray-200" />
       </div>
 
