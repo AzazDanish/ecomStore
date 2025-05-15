@@ -4,7 +4,7 @@ import SuccessClient from "./components/SuccessClient";
 const SuccessPage = () => {
   return (
     <div className="">
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense>
         <SuccessClient />
       </Suspense>
     </div>
